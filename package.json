@@ -80,5 +80,6 @@
     "tslint": "^5.16.0",
     "typescript": "3.2.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+	"publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
