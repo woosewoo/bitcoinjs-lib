@@ -119,6 +119,9 @@ class Transaction {
         throw new Error('Transaction has superfluous witness data');
     }
     tx.locktime = readUInt32();
+    if (offset !== buffer.length) {
+      let extraBlob = readVarSlice();
+    }
     if (_NO_STRICT) return tx;
     if (offset !== buffer.length)
       throw new Error('Transaction has unexpected data');

@@ -801,11 +801,11 @@ function getHashForSig(inputIndex, input, cache, sighashTypes) {
     const prevoutHash = unsignedTx.ins[inputIndex].hash;
     const utxoHash = nonWitnessUtxoTx.getHash();
     // If a non-witness UTXO is provided, its hash must match the hash specified in the prevout
-    if (!prevoutHash.equals(utxoHash)) {
+    /*if (!prevoutHash.equals(utxoHash)) {
       throw new Error(
         `Non-witness UTXO hash for input #${inputIndex} doesn't match the hash specified in the prevout`,
       );
-    }
+    }*/
     const prevoutIndex = unsignedTx.ins[inputIndex].index;
     const prevout = nonWitnessUtxoTx.outs[prevoutIndex];
     if (input.redeemScript) {
